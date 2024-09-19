@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+    <style>
+        /* div{
+            color: blue;
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+        } */
+        /*Block dan inline*/
+
+        section{
+            border: 1px solid black;
+            width: 600px;
+            height: 600px;
+            /* display: flex;
+            flex-direction: row;    >>>> Display Flex
+            flex-wrap:nowrap ;
+            justify-content: space-evenly;
+            align-items: center; */
+            display: grid;                               /* >>>> Display grid */
+            grid-template-columns: repeat(2, 1fr);      
+            grid-template-rows: 1fr 2fr 2fr;
+            grid-template-areas: 
+            "satu satu"
+            "dua tiga"
+            "empat lima";
+            /*2 kolom 3 baris*/
+        }
+        div{
+            /* width: 100px;
+            height: 100px; */
+            background-color: yellow;
+            border: 1px solid black;
+        }
+        #satu{
+            grid-area: satu;
+        }
+        #dua{
+            grid-area: dua;
+        }                                            /*grid*/
+        #tiga{
+            grid-area: tiga;
+        }
+        #empat{
+            grid-area: empat;
+        }
+        #lima{
+            grid-area: lima;
+        }
+
+    </style>
+
+    
+</head>
+<body>
+    <!-- <section>
+        Lorem ipsum sit amot consestetur elit.Blandits,mulla.
+        Mairos <div>Display</div> cucurela.
+    </section> -->
+
+    <section>
+        <div id="satu">1</div>
+        <div id="dua">2</div>
+        <div id="tiga">3</div>
+        <div id="empat">4</div>
+        <div id="lima">5</div>
+    </section>
+</body>
+</html>
